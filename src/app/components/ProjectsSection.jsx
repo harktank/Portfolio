@@ -7,58 +7,122 @@ import { motion, useInView } from "framer-motion";
 const projectsData = [
   {
     id: 1,
-    title: "React Portfolio Website",
+    title: "Weather Prediction",
     description: "Project 1 description",
-    image: "/images/projects/1.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
+    image: "/images/weather_and_prediction.png",
+    tag: ["All","ML"],
+    gitUrl: "https://github.com/harktank/Weather-Prediction",
     previewUrl: "/",
   },
   {
     id: 2,
-    title: "Potography Portfolio Website",
+    title: "Sealevel Prediction",
     description: "Project 2 description",
-    image: "/images/projects/2.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
+    image: "/images/Sealevel.jpeg",
+    tag: ["All","ML"],
+    gitUrl: "https://github.com/harktank/sealevel-Prediction",
     previewUrl: "/",
   },
   {
     id: 3,
-    title: "E-commerce Application",
+    title: "Detective Game",
     description: "Project 3 description",
-    image: "/images/projects/3.png",
-    tag: ["All", "Web"],
-    gitUrl: "/",
+    image: "/images/detective.jpeg",
+    tag: ["All","ML"],
+    gitUrl: "https://github.com/harktank/Detective-Game-in-ml",
     previewUrl: "/",
   },
   {
     id: 4,
-    title: "Food Ordering Application",
+    title: "Disease Prediction",
     description: "Project 4 description",
-    image: "/images/projects/4.png",
-    tag: ["All", "Mobile"],
-    gitUrl: "/",
+    image: "/images/heart.png",
+    tag: ["All","ML"],
+    gitUrl: "https://github.com/harktank/Disease-Prediction",
     previewUrl: "/",
   },
   {
     id: 5,
-    title: "React Firebase Template",
+    title: "Medical Website",
     description: "Authentication and CRUD operations",
-    image: "/images/projects/5.png",
+    image: "/images/doctor.png",
     tag: ["All", "Web"],
-    gitUrl: "/",
+    gitUrl: "https://github.com/harktank/Medical-Website",
     previewUrl: "/",
   },
   {
     id: 6,
-    title: "Full-stack Roadmap",
+    title: "E-learning Website",
     description: "Project 5 description",
-    image: "/images/projects/6.png",
+    image: "/images/elearning.jpg",
     tag: ["All", "Web"],
-    gitUrl: "/",
+    gitUrl: "https://github.com/harktank/e-learning-clone",
     previewUrl: "/",
   },
+  {
+    id: 7,
+    title: "Smart India Hackathon",
+    description: "Project 5 description",
+    image: "/images/SIH.jpg",
+    tag: ["All", "Certificate"],
+    gitUrl: "https://www.linkedin.com/in/himanshu-ghode-80a857261/recent-activity/all/",
+    previewUrl: "https://www.linkedin.com/in/himanshu-ghode-80a857261/recent-activity/all/",
+  },
+  {
+    id: 8,
+    title: "MIT Hackathon",
+    description: "Project 5 description",
+    image: "/images/MIT.jpg",
+    tag: ["All", "Certificate"],
+    gitUrl: "https://www.linkedin.com/in/himanshu-ghode-80a857261/recent-activity/all/",
+    previewUrl: "https://www.linkedin.com/in/himanshu-ghode-80a857261/recent-activity/all/",
+  },
+  {
+    id: 9,
+    title: "Bootcamp",
+    description: "Project 5 description",
+    image: "/images/BOOTCAMP.jpg",
+    tag: ["All", "Certificate"],
+    gitUrl: "https://github.com/harktank/e-learning-clone",
+    previewUrl: "https://www.linkedin.com/in/himanshu-ghode-80a857261/recent-activity/all/",
+  },
+  {
+    id: 10,
+    title: "Bootcamp",
+    description: "Project 5 description",
+    image: "/images/BOOTCAMP.jpg",
+    tag: ["All", "Certificate"],
+    gitUrl: "https://www.linkedin.com/in/himanshu-ghode-80a857261/recent-activity/all/",
+    previewUrl: "https://www.linkedin.com/in/himanshu-ghode-80a857261/recent-activity/all/",
+  },
+  {
+    id: 11,
+    title: "Digital Marketing",
+    description: "Project 5 description",
+    image: "/images/WOOBBLR.JPG",
+    tag: ["All", "Certificate"],
+    gitUrl: "https://www.linkedin.com/in/himanshu-ghode-80a857261/recent-activity/all/",
+    previewUrl: "https://www.linkedin.com/in/himanshu-ghode-80a857261/recent-activity/all/",
+  },
+  {
+    id: 12,
+    title: "Hack To Crack Hackathon",
+    description: "Project 5 description",
+    image: "/images/H2C.jpg",
+    tag: ["All", "Certificate"],
+    gitUrl: "https://www.linkedin.com/in/himanshu-ghode-80a857261/recent-activity/all/",
+    previewUrl: "https://www.linkedin.com/in/himanshu-ghode-80a857261/recent-activity/all/",
+  },
+  {
+    id: 13,
+    title: "Web Developent Internship",
+    description: "Project 5 description",
+    image: "/images/H2C.jpg",
+    tag: ["All", "Certificate"],
+    gitUrl: "https://www.linkedin.com/in/himanshu-ghode-80a857261/recent-activity/all/",
+    previewUrl: "https://www.linkedin.com/in/himanshu-ghode-80a857261/recent-activity/all/",
+  },
+
 ];
 
 const ProjectsSection = () => {
@@ -95,9 +159,14 @@ const ProjectsSection = () => {
           name="Web"
           isSelected={tag === "Web"}
         />
+         <ProjectTag
+          onClick={handleTagChange}
+          name="ML"
+          isSelected={tag === "Web"}
+        />
         <ProjectTag
           onClick={handleTagChange}
-          name="Mobile"
+          name="Certificate"
           isSelected={tag === "Mobile"}
         />
       </div>
